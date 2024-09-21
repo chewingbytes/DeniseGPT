@@ -287,20 +287,20 @@ def get_text():
 
 
 def speak(text):
-    #audio = client.generate(
-        #text=text,
-        #voice="Lily",
-        #model="eleven_turbo_v2_5"
-    #)
-    #play(audio)
     print("[DEBUG] speak: Started")
-    engine = pyttsx3.init("sapi5")
-    voices = engine.getProperty("voices")
-    engine.setProperty("voice", voices[0].id)
-    engine.setProperty("rate", speech_speed)
-    print("[DEBUG] speak: Audio generated")
-    engine.say(text)
-    engine.runAndWait()
+    audio = client.generate(
+        text=text,
+        voice="Lily",
+        model="eleven_turbo_v2_5"
+    )
+    play(audio)
+    #engine = pyttsx3.init("sapi5")
+    #voices = engine.getProperty("voices")
+    #engine.setProperty("voice", voices[1].id)
+    #engine.setProperty("rate", speech_speed)
+    #print("[DEBUG] speak: Audio generated")
+    #engine.say(text)
+    #engine.runAndWait()
     print("[DEBUG] speak: Finished")
 
 
