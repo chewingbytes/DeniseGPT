@@ -1,3 +1,4 @@
 node_modules
 .env
 /functions/system_controls/screenshots/
+venv/
